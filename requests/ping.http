@@ -1,2 +1,1 @@
-   ### Видалення клієнта із замовленнями (очікуємо 409)
-   DELETE http://localhost:5000/customers/1435
+GET http://localhost:5000/customers
