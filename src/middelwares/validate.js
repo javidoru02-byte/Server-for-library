@@ -1,7 +1,13 @@
 const validate = (schema) => async (req, res, next) => {
-    req.body = await schema.validate(req.body, { abortEarly: false, stripUnknown: true });
+  try {
+    req.body = await schema.validate(req.body, {
+      abortEarly: false,
+      stripUnknown: true,
+    });
     next();
-
-}
+  } catch (error) {
+    next(error);
+  }
+};
 
 module.exports = validate;
