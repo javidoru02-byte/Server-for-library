@@ -1,0 +1,30 @@
+### GET 
+GET http://localhost:5000/customers
+
+### GET 
+GET http://localhost:5000/customers/1
+
+### POST
+POST http://localhost:5000/customers
+Content-Type: application/json
+
+{
+  "full_name": "Test Customer",
+  "email": "customer@example.com",
+  "phone": "+380501234567",
+  "password": "secret123"
+}
+
+### PUT 
+PUT http://localhost:5000/customers/13
+Content-Type: application/json
+
+{
+  "full_name": "Updated Customer",
+  "email": "updated@example.com",
+  "phone": "+380509999999",
+  "password": "newpass123"
+}
+
+### DELETE
+DELETE http://localhost:5000/customers/13
